@@ -2,10 +2,10 @@ class Ball_battling_Playground {
     constructor(root) {
         this.root = root;
         this.$playground = $(`
-        <div class="bb-game-playground">游戏界面</div>
+        <div class="bb-game-playground"></div>
         `);
 
-        // this.hide();
+        this.hide();
         this.root.$bb_game.append(this.$playground);
         this.width = this.$playground.width();
         this.height = this.$playground.height();

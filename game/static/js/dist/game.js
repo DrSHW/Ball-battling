@@ -402,10 +402,10 @@ class Ball_battling_Playground {
     constructor(root) {
         this.root = root;
         this.$playground = $(`
-        <div class="bb-game-playground">游戏界面</div>
+        <div class="bb-game-playground"></div>
         `);
 
-        // this.hide();
+        this.hide();
         this.root.$bb_game.append(this.$playground);
         this.width = this.$playground.width();
         this.height = this.$playground.height();
@@ -441,7 +441,7 @@ export class Ball_battling {
     constructor(id) {
         this.id = id;
         this.$bb_game = $('#' + id);
-        // this.menu = new Ball_battling_Menu(this);
+        this.menu = new Ball_battling_Menu(this);
         this.playground = new Ball_battling_Playground(this);
 
         this.start();
