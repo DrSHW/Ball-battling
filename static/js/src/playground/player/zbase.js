@@ -39,11 +39,12 @@ class Player extends Ball_battling_object {
             return false;
         });
         this.playground.game_map.$canvas.mousedown(function(e) {
+            const rect = self.ctx.canvas.getBoundingClientRect();       // 求画布的精确位置
             if(e.which === 3) {
-                self.move_to(e.clientX, e.clientY);
+                self.move_to(e.clientX - rect.left, e.clientY - rect.top);
             } else if(e.which === 1) {
                 if(self.cur_skill === "fireball") {
-                    self.shoot_fireball(e.clientX, e.clientY);
+                    self.shoot_fireball(e.clientX - rect.left, e.clientY - rect.top);
                 }
                 self.cur_skill = null;
             }
