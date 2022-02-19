@@ -19,6 +19,7 @@ class Ball_battling_Menu {
             </div>
         </div>
         `);
+        this.$menu.hide();
         this.root.$bb_game.append(this.$menu);
         this.$solo_mode = this.$menu.find('.bb-game-menu-field-item-solo-mode');
         this.$muti_mode = this.$menu.find('.bb-game-menu-field-item-muti-mode');
