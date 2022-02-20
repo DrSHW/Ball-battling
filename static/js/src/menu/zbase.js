@@ -13,7 +13,7 @@ class Ball_battling_Menu {
                 </div>
                 <br>
                 <div class="bb-game-menu-field-item bb-game-menu-field-item-settings">
-                    设置
+                    退出
                 </div>
                 <br>
             </div>
@@ -42,7 +42,7 @@ class Ball_battling_Menu {
             console.log("2");
         });
         this.$settings.click(function(){
-            console.log("3");
+            self.root.settings.logout_on_remote();
         });
     }
     

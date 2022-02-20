@@ -4,10 +4,9 @@ export class Ball_battling {
         this.$bb_game = $('#' + id);
 
         this.BBOS = BBOS;
-
-        this.settings = new Settings(this);
         this.menu = new Ball_battling_Menu(this);
         this.playground = new Ball_battling_Playground(this);
+        this.settings = new Settings(this);
 
         this.start();
     }
